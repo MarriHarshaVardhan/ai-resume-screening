@@ -1,1 +1,5 @@
 .env
+__pycharm__/
+*.pyc
+__pycache__/
+*.pyo
