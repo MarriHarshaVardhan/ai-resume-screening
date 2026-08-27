@@ -1,5 +1,6 @@
 import logging
 from fastapi import FastAPI
+
 from app.routes import router
 
 
@@ -8,6 +9,9 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI(title="AI Resume Screening API",version="1.0.0")
 app.include_router(router)
+
+
+
 @app.get("/")
 def root():
     logger.info("Root endpoint called")
