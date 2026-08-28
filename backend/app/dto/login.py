@@ -1,0 +1,15 @@
+from pydantic import BaseModel, Field
+
+
+class LoginData(BaseModel):
+    email: str
+    password: str = Field(min_length=8)
+
+
+class LoginRequestDTO(BaseModel):
+    data: LoginData
+
+
+class LoginResponseDTO(BaseModel):
+    message: str
+    data: dict

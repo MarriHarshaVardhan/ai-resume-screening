@@ -2,13 +2,9 @@ from datetime import datetime
 
 from sqlalchemy import String, Text, DateTime, ForeignKey, Float
 from sqlalchemy.dialects.postgresql import JSONB
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-
-# Base
-
-class Base(DeclarativeBase):
-    pass
+from app.db.database import Base
 
 
 # Mixins

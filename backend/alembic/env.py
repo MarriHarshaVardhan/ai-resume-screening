@@ -12,6 +12,7 @@ sys.path.insert(0, os.getcwd())
 
 from app.core.config import settings
 from app.db.models.user import Base
+from app.db.models import screening
 
 
 # Alembic Config object

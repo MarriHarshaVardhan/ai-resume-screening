@@ -1,6 +1,7 @@
-def main():
-    print("Hello from ai-resume-screening!")
+from fastapi import FastAPI
 
+from app.api.routes.routes import router
 
-if __name__ == "__main__":
-    main()
+app = FastAPI()
+
+app.include_router(router)
