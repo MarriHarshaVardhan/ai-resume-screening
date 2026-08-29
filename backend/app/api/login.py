@@ -7,7 +7,6 @@ from app.db.database import get_db
 from app.dto.login import LoginRequestDTO
 from app.services.login import login_user
 
-
 logger = logging.getLogger(__name__)
 
 router = APIRouter(

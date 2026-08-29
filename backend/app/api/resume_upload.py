@@ -1,8 +1,9 @@
-from fastapi import APIRouter, UploadFile, File, Depends
+from fastapi import APIRouter, Depends, File, UploadFile
 from sqlalchemy.orm import Session
+
 from app.db.database import get_db
-from app.services.resume_upload import create_resume_upload
 from app.dto.resume_upload import ResumeUploadResponse
+from app.services.resume_upload import create_resume_upload
 
 router = APIRouter(prefix="/resume", tags=["Resume Upload"])
 

@@ -1,17 +1,17 @@
-from typing import Any, Optional
+from typing import Any
 
 from pydantic import BaseModel
 
 
 class ScreeningResultResponse(BaseModel):
     screening_id: int
-    candidate_name: Optional[str] = None
-    job_title: Optional[str] = None
-    match_score: Optional[float] = None
+    candidate_name: str | None = None
+    job_title: str | None = None
+    match_score: float | None = None
     matched_skills: Any = None
     missing_skills: Any = None
-    experience: Optional[str] = None
-    qualification: Optional[str] = None
+    experience: str | None = None
+    qualification: str | None = None
     certifications: Any = None
-    recommendation: Optional[str] = None
-    summary: Optional[str] = None
+    recommendation: str | None = None
+    summary: str | None = None

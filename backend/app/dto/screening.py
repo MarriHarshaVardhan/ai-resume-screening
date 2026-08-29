@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from typing import List, Optional
 
 
 class ScreeningResultResponse(BaseModel):
@@ -7,13 +6,13 @@ class ScreeningResultResponse(BaseModel):
     candidate_name: str
     job_title: str
     match_score: float
-    matched_skills: List[str]
-    missing_skills: List[str]
-    experience: Optional[str] = None
-    qualification: Optional[str] = None
-    certifications: List[str] = []
-    recommendation: Optional[str] = None
-    summary: Optional[str] = None
+    matched_skills: list[str]
+    missing_skills: list[str]
+    experience: str | None = None
+    qualification: str | None = None
+    certifications: list[str] = []
+    recommendation: str | None = None
+    summary: str | None = None
 
     class Config:
         from_attributes = True

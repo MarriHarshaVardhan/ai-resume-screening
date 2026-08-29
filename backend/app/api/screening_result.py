@@ -1,13 +1,12 @@
 from fastapi import APIRouter, Depends
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse  # type: ignore
 from sqlalchemy.orm import Session
 
 from app.db.database import get_db
 from app.services.screening_result import (
-    get_screening_result,
     generate_screening_report,
+    get_screening_result,
 )
-
 
 router = APIRouter(
     prefix="/screening-result",

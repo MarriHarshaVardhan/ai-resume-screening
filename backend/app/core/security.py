@@ -1,13 +1,12 @@
+import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-import jwt
 from sqlalchemy.orm import Session
- 
+
 from app.core.config import settings
 from app.db.database import get_db
 from app.db.models.user import User
- 
- 
+
 bearer_scheme = HTTPBearer()
  
  

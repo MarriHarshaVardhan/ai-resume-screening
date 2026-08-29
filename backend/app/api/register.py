@@ -1,11 +1,10 @@
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
- 
+
 from app.db.database import get_db
 from app.dto.register import RegistrationRequestDTO, RegistrationResponseDTO
 from app.services.register import register_user
- 
- 
+
 router = APIRouter()
  
  
