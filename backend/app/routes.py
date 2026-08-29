@@ -7,7 +7,6 @@ from app.api.resume_upload import router as resume_upload_router
 
 router = APIRouter()
 
-router.include_router(login_router)
 router.include_router(register_router, prefix="/api")
 router.include_router(auth_router, prefix="/api")
 router.include_router(resume_upload_router)
